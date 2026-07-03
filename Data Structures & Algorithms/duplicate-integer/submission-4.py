@@ -1,0 +1,12 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        
+        hmap = {}
+
+        for i in range(0,len(nums)):
+
+            if nums[i] in hmap:
+                return True
+            else:
+                hmap[nums[i]] = i
+        return False
